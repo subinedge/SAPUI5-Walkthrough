@@ -1,0 +1,7 @@
+specVersion: '2.2'
+metadata:
+  name: ZSAPUI5_DOCUMENTATION
+type: application
+framework:
+  name: SAPUI5
+  version: "1.85.2"

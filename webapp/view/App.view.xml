@@ -1,0 +1,4 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+  <Label text="Label"/>
+  <Input placeholder="Enter your name..." width="30%"/>
+</mvc:View>
