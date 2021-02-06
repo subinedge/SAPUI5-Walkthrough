@@ -1,3 +1,4 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.ui5walkthrough.controller.App">
   <Button text="Click to say hello..." type="Emphasized" press="onPress"/>
+  <Input placeholder="Enter your name..." width="30%" value="{/introMessage/name}" description="Hello {/introMessage/name}" valueLiveUpdate="true"/>
 </mvc:View>
