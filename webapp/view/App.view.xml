@@ -1,4 +1,4 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.ui5walkthrough.controller.App">
   <Button text="{i18n>buttonShowMessageToast}" type="Emphasized" press="onPress"/>
-  <Input placeholder="{i18n>inputPlaceholder}" width="30%" value="{/introMessage/name}" description="Hello {/introMessage/name}" valueLiveUpdate="true"/>
+  <Input placeholder="{i18n>inputPlaceholder}" width="50%" value="{/introMessage/name}" description="Hello {/introMessage/name}, {/introMessage/category}" valueLiveUpdate="true"/>
 </mvc:View>
