@@ -11,7 +11,7 @@
     }
   },
   "sap.ui": {
-	"technology": "UI5",
+    "technology": "UI5",
     "deviceTypes": {
       "desktop": true,
       "tablet": true,
@@ -25,21 +25,28 @@
       "async": true,
       "id": "app"
     },
-	"dependencies": {
-	  "minUI5Version": "1.60",
-	  "libs": {
-		  "sap.m": {}
-	  }
-	},
-	"models": {
-	  "i18n": {
-      "type": "sap.ui.model.resource.ResourceModel",
-      "settings": {
-        "bundleName": "com.ui5walkthrough.i18n.i18n",
-        "supportedLocales": [""],
-        "fallbackLocale": ""
+    "dependencies": {
+      "minUI5Version": "1.60",
+      "libs": {
+        "sap.m": {}
       }
-	  }
-	}
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.ui5walkthrough.i18n.i18n",
+          "supportedLocales": [""],
+          "fallbackLocale": ""
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/styles.css"
+        }
+      ]
+    }
   }
 }

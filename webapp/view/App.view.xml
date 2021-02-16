@@ -1,15 +1,19 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.ui5walkthrough.controller.App" displayBlock="true">
-  <App>
-    <pages>
-      <Page title="{i18n>homePageTitle}" backgroundDesign="Solid">
-        <content>
-          <Panel headerText="{i18n>homePagePanelTitle}">
-            <Button text="{i18n>buttonShowMessageToast}" type="Emphasized" press="onPress"/>
-            <ToolbarSpacer ></ToolbarSpacer>
-            <Input placeholder="{i18n>inputPlaceholder}" width="70%" value="{/introMessage/name}" description="Hello {/introMessage/name}, {/introMessage/category}" valueLiveUpdate="true"/>
-          </Panel>
-        </content>
-      </Page>
-    </pages>
-  </App>
+  <Shell>
+    <App>
+        <pages>
+          <Page title="{i18n>homePageTitle}" backgroundDesign="Solid">
+            <content>
+              <Panel headerText="{i18n>homePagePanelTitle}" class="sapUiResponsiveMargin" width="auto">
+                <content>
+                  <Button text="{i18n>buttonShowMessageToast}" type="Emphasized" press="onPress" class="sapUiSmallMarginEnd"/>
+                  <!-- <ToolbarSpacer ></ToolbarSpacer> -->
+                  <Input placeholder="{i18n>inputPlaceholder}" width="70%" value="{/introMessage/name}" description="Hello {/introMessage/name}, {/introMessage/category}" valueLiveUpdate="true"/>
+                </content>
+              </Panel>
+            </content>
+          </Page>
+        </pages>
+      </App>
+  </Shell>
 </mvc:View>
