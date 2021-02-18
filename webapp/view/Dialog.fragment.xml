@@ -2,6 +2,9 @@
   <Dialog
       id="helloDialog"
       title="Hello {/introMessage/name}">
+      <content>
+        <core:Icon src="sap-icon://hello-world" size="5rem" class="sapUiSmallMargin"></core:Icon>
+      </content>
       <beginButton>
         <Button text="OK" press="onCloseDialog"></Button>
       </beginButton>
