@@ -32,6 +32,7 @@ sap.ui.define(
           this.pDialog = Fragment.load({
             id: oView.getId(),
             name: "com.ui5walkthrough.view.Dialog",
+            controller: this,
           }).then(function (oDialog) {
             // connect dialog to the root view of this component (models, lifecycle)
             oView.addDependent(oDialog);
@@ -42,6 +43,10 @@ sap.ui.define(
           oDialog.open();
         });
       },
+
+      onCloseDialog: function() {
+        this.byId("helloDialog").close();
+      }
     });
   }
 );

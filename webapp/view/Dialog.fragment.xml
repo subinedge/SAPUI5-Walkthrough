@@ -2,5 +2,8 @@
   <Dialog
       id="helloDialog"
       title="Hello {/introMessage/name}">
+      <beginButton>
+        <Button text="OK" press="onCloseDialog"></Button>
+      </beginButton>
    </Dialog>
 </core:FragmentDefinition>
