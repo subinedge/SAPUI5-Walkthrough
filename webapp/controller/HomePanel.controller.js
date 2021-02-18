@@ -1,6 +1,6 @@
 sap.ui.define(
-  ["sap/ui/core/mvc/Controller", "sap/m/MessageToast"],
-  function (Controller, MessageToast) {
+  ["sap/ui/core/mvc/Controller", "sap/m/MessageToast", "sap/ui/core/Fragment"],
+  function (Controller, MessageToast, Fragment) {
     "use strict";
 
     return Controller.extend("com.ui5walkthrough.controller.HomePanel", {
@@ -16,6 +16,31 @@ sap.ui.define(
         var oMsg = oBundle.getText("inputDescription", [oText, oText1]);
         // 4) show the message toast
         MessageToast.show(oMsg);
+      },
+
+      onPressDialog: function () {
+        // if(!this.oDialog) {
+        //   this.oDialog = sap.ui.xmlfragment("com.ui5walkthrough.view.Dialog", this);
+        // }
+
+        // this.oDialog.open();
+
+        var oView = this.getView();
+
+        // create dialog lazily
+        if (!this.pDialog) {
+          this.pDialog = Fragment.load({
+            id: oView.getId(),
+            name: "com.ui5walkthrough.view.Dialog",
+          }).then(function (oDialog) {
+            // connect dialog to the root view of this component (models, lifecycle)
+            oView.addDependent(oDialog);
+            return oDialog;
+          });
+        }
+        this.pDialog.then(function (oDialog) {
+          oDialog.open();
+        });
       },
     });
   }
