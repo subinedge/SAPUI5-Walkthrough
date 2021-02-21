@@ -28,20 +28,19 @@ sap.ui.define(
         var oView = this.getView();
 
         // create dialog lazily
-        if (!this.pDialog) {
-          this.pDialog = Fragment.load({
+        if (!this.byId("helloDialog")) {
+          Fragment.load({
             id: oView.getId(),
             name: "com.ui5walkthrough.view.Dialog",
             controller: this,
           }).then(function (oDialog) {
             // connect dialog to the root view of this component (models, lifecycle)
             oView.addDependent(oDialog);
-            return oDialog;
+            oDialog.open();
           });
+        }else {
+          this.byId("helloDialog").open();          
         }
-        this.pDialog.then(function (oDialog) {
-          oDialog.open();
-        });
       },
 
       onCloseDialog: function() {

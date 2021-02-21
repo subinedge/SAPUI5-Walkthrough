@@ -5,6 +5,7 @@
           <Page title="{i18n>homePageTitle}" backgroundDesign="Solid">
             <content>
               <mvc:XMLView viewName="com.ui5walkthrough.view.HomePanel"/>
+              <mvc:XMLView viewName="com.ui5walkthrough.view.InvoiceList"/>
             </content>
           </Page>
         </pages>
